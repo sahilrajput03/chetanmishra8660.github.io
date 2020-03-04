@@ -12,7 +12,7 @@ window.addEventListener('beforeinstallprompt', (event) => {
   // Stash the event so it can be triggered later.
   window.deferredPrompt = event;
   // BOOM => FOR INSTANTLY ASKING FOR ADDING THE ADD TO MOBILE/DESKTOP
-  window.deferredPrompt.prompt()
+  // window.deferredPrompt.prompt()
   // BOOM ^^ FOR INSTANTLY ASKING FOR ADDING THE ADD TO MOBILE/DESKTOP
 
   // Remove the 'hidden' class from the install button container

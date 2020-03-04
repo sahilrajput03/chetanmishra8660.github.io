@@ -1,92 +1,1949 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Hello!</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/style.css">
-    <!-- Manifest FILE HAS TO BE ON THE SAME SERVER(NOT NECESSARY TO BE ON ROOT DIRECTORY) TO BE ABLE TO CREATE WEBAPK FROM PLAYSTORE FOR CHROME, OTHERWISE ITS GOOD FOR CREATING JUSTSHORTCUTS FOR ALL BROWSERS -->
-    <!--MANIFEST OTHER DOMAIN >>  WEBAPK: NO, WEBAPP SHORTCUT: YES -->
-    <link rel="manifest" href="/manifest.json">
-    <!-- INLING MANIFEST DOESN'T WORK <link rel="manifest" href='data:application/manifest+json,{ "short_name": "Weather", "name": "Weather - Do I need an umbrella?", "description": "Weather forecast information", "icons": [ { "src": "https://via.placeholder.com/48", "sizes": "48x48", "type": "image/png" }, { "src": "https://via.placeholder.com/72", "sizes": "72x72", "type": "image/png" }, { "src": "https://via.placeholder.com/96", "sizes": "96x96", "type": "image/png" }, { "src": "https://via.placeholder.com/144", "sizes": "144x144", "type": "image/png" }, { "src": "https://via.placeholder.com/192", "sizes": "192x192", "type": "image/png" }, { "src": "https://via.placeholder.com/512", "sizes": "512x512", "type": "image/png" } ], "start_url": "/", "background_color": "#3367D6", "display": "standalone", "scope": "/", "theme_color": "#3367D6" }'> -->
-    <!-- INLING MANIFEST DOESN'T WORK <meta name="manifest" content='{ "short_name": "Weather", "name": "Weather - Do I need an umbrella?", "description": "Weather forecast information", "icons": [ { "src": "https://via.placeholder.com/48", "sizes": "48x48", "type": "image/png" }, { "src": "https://via.placeholder.com/72", "sizes": "72x72", "type": "image/png" }, { "src": "https://via.placeholder.com/96", "sizes": "96x96", "type": "image/png" }, { "src": "https://via.placeholder.com/144", "sizes": "144x144", "type": "image/png" }, { "src": "https://via.placeholder.com/192", "sizes": "192x192", "type": "image/png" }, { "src": "https://via.placeholder.com/512", "sizes": "512x512", "type": "image/png" } ], "start_url": "/", "background_color": "#3367D6", "display": "standalone", "scope": "/", "theme_color": "#3367D6" }'> -->
-  </head>  
-  <body>
-    <h1>
-      Mytesting For Dakku Daddy
-    </h1>
-      
-    <!-- Install button, hidden by default -->
-    <div id="installContainer" class="hidden">
-      <button id="butInstall" type="button">
-        Install
-      </button>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+  <title>Your awesome title | Write an awesome description for your new site here. You can edit this line in
+    _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site
+    description.</title>
+  <meta name="generator" content="Jekyll v4.0.0" />
+  <meta property="og:title" content="Your awesome title" />
+  <meta property="og:locale" content="en_US" />
+  <meta name="description"
+    content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+  <meta property="og:description"
+    content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+  <link rel="canonical" href="http://localhost:4000/" />
+  <meta property="og:url" content="http://localhost:4000/" />
+  <meta property="og:site_name" content="Your awesome title" />
+  <script type="application/ld+json">
+{"@type":"WebSite","url":"http://localhost:4000/","headline":"Your awesome title","name":"Your awesome title","description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","@context":"https://schema.org"}</script>
+  <!-- End Jekyll SEO tag -->
+  <link rel="stylesheet" href="/assets/main.css">
+  <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Your awesome title" />
+  <link rel="manifest" href="/manifest.json">
+</head>
+
+<body>
+  <div id="installContainer" class="hidden">
+    <button id="butInstall" type="button">
+      Install
+    </button>
+  </div>
+     <script src="/scriptpwa.js" defer></script>
+     <header class="site-header" role="banner">
+
+    <div class="wrapper"><a class="site-title" rel="author" href="/">Your awesome title</a>
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path
+                d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z" />
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav>
     </div>
-    <!--WebPage's Script -->
-     <!-- <script src="/script.js" defer></script> -->
-     <script>
-      const divInstall = document.getElementById('installContainer');
-      const butInstall = document.getElementById('butInstall');
+  </header>
+  <main class="page-content" aria-label="Content">
+    <div class="wrapper">
+      <div class="home">
+        <h2 class="post-list-heading">Posts</h2>
+        <ul class="post-list">
+          <li><span class="post-meta">Mar 5, 2020</span>
+            <h3>
+              <a class="post-link" href="/jekyll/update/2020/03/05/welcome-to-jekyll.html">
+                Welcome to Jekyll!
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Mar 4, 2020</span>
+            <h3>
+              <a class="post-link" href="/2020/03/04/strapi-open-source-nodejs-headless-cms.html">
+                Strapi open source Node.js Headless CMS Strapi Live Demo - the leading NodeJS open-source headless CMS
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Mar 4, 2020</span>
+            <h3>
+              <a class="post-link" href="/2020/03/04/12-best-nodejs-based-cms-as-of-2020.html">
+                12 Best Node.js-based CMS as of 2020 - Slant
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Mar 4, 2020</span>
+            <h3>
+              <a class="post-link" href="/2020/03/04/is-there-cold-war-between-android-and.html">
+                Is there a cold war between Android and Chrome because of PWAs?
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Mar 3, 2020</span>
+            <h3>
+              <a class="post-link" href="/2020/03/03/html-how-do-i-disable-text-selection.html">
+                HTML - How do I disable text selection with CSS or JavaScript? - Stack Overflow
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Mar 2, 2020</span>
+            <h3>
+              <a class="post-link" href="/2020/03/02/yourstory.html">
+                YourStory
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Mar 1, 2020</span>
+            <h3>
+              <a class="post-link" href="/2020/03/01/25-strategies-to-increase-instant.html">
+                25 Strategies To Increase Instant Website Traffic FAST (Updated)
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Mar 1, 2020</span>
+            <h3>
+              <a class="post-link" href="/2020/03/01/guideblogging-actionable-blogging-seo.html">
+                GuideBlogging - Actionable Blogging &amp; SEO Tips
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Feb 29, 2020</span>
+            <h3>
+              <a class="post-link" href="/2020/02/29/a-selection-of-progressive-web-apps_29.html">
+                A selection of Progressive Web Apps
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Feb 28, 2020</span>
+            <h3>
+              <a class="post-link" href="/2020/02/28/add-to-home-screen-a2hs-ng-chicago.html">
+                Add To Home Screen (A2HS) | ng-Chicago
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Feb 24, 2020</span>
+            <h3>
+              <a class="post-link" href="/2020/02/24/managing-environment-variables-in.html">
+                Managing Environment Variables in Node.js with dotenv
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Feb 24, 2020</span>
+            <h3>
+              <a class="post-link" href="/2020/02/24/the-twelve-factor-app.html">
+                The Twelve-Factor App
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Feb 20, 2020</span>
+            <h3>
+              <a class="post-link" href="/2020/02/20/performance-best-practices-using.html">
+                Performance Best Practices Using Express in Production
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Feb 12, 2020</span>
+            <h3>
+              <a class="post-link" href="/2020/02/12/11-top-react-developer-tools-for-2020.html">
+                11 Top React Developer Tools for 2020 - Bits and Pieces
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Feb 5, 2020</span>
+            <h3>
+              <a class="post-link" href="/2020/02/05/a-selection-of-progressive-web-apps.html">
+                A selection of Progressive Web Apps
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Feb 4, 2020</span>
+            <h3>
+              <a class="post-link" href="/2020/02/04/old-css-new-css-fuzzy-notepad.html">
+                Old CSS, new CSS / fuzzy notepad
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Feb 4, 2020</span>
+            <h3>
+              <a class="post-link" href="/2020/02/04/how-to-build-pwa-from-scratch-with-html.html">
+                How to build a PWA from scratch with HTML, CSS, and JavaScript
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Feb 3, 2020</span>
+            <h3>
+              <a class="post-link" href="/2020/02/03/10-reasons-telegram-founder-thinks.html">
+                10 reasons Telegram founder ‘thinks’ using WhatsApp is dangerous | Gadgets Now
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Feb 3, 2020</span>
+            <h3>
+              <a class="post-link" href="/2020/02/03/crm-software-cloud-computing-solutions.html">
+                CRM Software: Cloud Computing Solutions For Every Business - Salesforce IN
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Feb 3, 2020</span>
+            <h3>
+              <a class="post-link" href="/2020/02/03/microsoft-is-bringing-native-like.html">
+                Microsoft is bringing native-like experience to Chrome PWAs
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Feb 3, 2020</span>
+            <h3>
+              <a class="post-link" href="/2020/02/03/plesk-innovative-hosting-control-panel.html">
+                Plesk - Innovative Hosting Control Panel
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Feb 3, 2020</span>
+            <h3>
+              <a class="post-link" href="/2020/02/03/wappalyzer-identify-technologies-on.html">
+                Wappalyzer - Identify technologies on websites
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Jan 30, 2020</span>
+            <h3>
+              <a class="post-link" href="/2020/01/30/5-react-projects-you-need-in-your.html">
+                5 React Projects You Need In Your Portfolio
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Jan 30, 2020</span>
+            <h3>
+              <a class="post-link" href="/2020/01/30/who-can-benefit-from-progressive-web.html">
+                Who can benefit from a Progressive Web App | e-point SA
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Jan 30, 2020</span>
+            <h3>
+              <a class="post-link" href="/2020/01/30/kubernetes.html">
+                Kubernetes
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Jan 29, 2020</span>
+            <h3>
+              <a class="post-link" href="/2020/01/29/javascript-libraries-are-almost-never.html">
+                JavaScript Libraries Are Almost Never Updated Once Installed
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Jan 28, 2020</span>
+            <h3>
+              <a class="post-link" href="/2020/01/28/2018s-top-7-libraries-and-packages-for.html">
+                2018’s Top 7 Libraries and Packages for Data Science and AI: Python &amp; R
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Jan 28, 2020</span>
+            <h3>
+              <a class="post-link" href="/2020/01/28/whatsapp-rival-telegram-adds-new.html">
+                WhatsApp rival Telegram adds new features on latest update: Details here
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Jan 26, 2020</span>
+            <h3>
+              <a class="post-link" href="/2020/01/26/3-handy-command-line-internet-speed.html">
+                3 handy command-line internet speed tests | Opensource.com
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Jan 24, 2020</span>
+            <h3>
+              <a class="post-link" href="/2020/01/24/phonepe-launches-upi-atm-service.html">
+                PhonePe Launches UPI ATM Service Through Merchant Network
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Jan 24, 2020</span>
+            <h3>
+              <a class="post-link" href="/2020/01/24/shadow-boxing-google-search.html">
+                shadow boxing - Google Search
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Jan 18, 2020</span>
+            <h3>
+              <a class="post-link" href="/2020/01/18/developing-with-visual-studio-online.html">
+                Developing with Visual Studio Online
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Jan 13, 2020</span>
+            <h3>
+              <a class="post-link" href="/2020/01/13/multi-root-workspaces-in-visual-studio.html">
+                Multi-root Workspaces in Visual Studio Code
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Jan 10, 2020</span>
+            <h3>
+              <a class="post-link" href="/2020/01/10/a-helpful-guide-to-lifestyle.html">
+                A Helpful Guide To Lifestyle Experiments | Break the Twitch
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Jan 4, 2020</span>
+            <h3>
+              <a class="post-link" href="/2020/01/04/quartz-global-business-news-and.html">
+                Quartz — Global business news and insights, Bold Fonts
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Jan 3, 2020</span>
+            <h3>
+              <a class="post-link" href="/2020/01/03/form-public-forms-quetionaires-survey.html">
+                Form, Public Forms, Quetionaires, Survey, etc - JotForm.com - One Solution
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Jan 3, 2020</span>
+            <h3>
+              <a class="post-link" href="/2020/01/03/mvc-in-plain-javascript.html">
+                MVC in Plain Javascript
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Jan 3, 2020</span>
+            <h3>
+              <a class="post-link" href="/2020/01/03/why-whatsapp-pay-is-lagging-behind.html">
+                Why WhatsApp Pay is lagging behind Paytm, Amazon, Google in India — Quartz India
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Jan 3, 2020</span>
+            <h3>
+              <a class="post-link" href="/2020/01/03/whatsapp-beta-programme-join-and.html">
+                Whatsapp Beta Programme - Join - And download from Playstore - Android App Testing - Google Play
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Jan 3, 2020</span>
+            <h3>
+              <a class="post-link" href="/2020/01/03/5-new-resolutions-every-novice.html">
+                5 New Resolutions Every Novice Programmer Should Take in 2020 - GeeksforGeeks
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Jan 1, 2020</span>
+            <h3>
+              <a class="post-link" href="/2020/01/01/make-it-installable.html">
+                Make it installable
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Jan 1, 2020</span>
+            <h3>
+              <a class="post-link" href="/2020/01/01/how-i-learned-react-js-as-noob-ultimate.html">
+                How I learned React JS as a noob — Ultimate React JS Starter Guide
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Jan 1, 2020</span>
+            <h3>
+              <a class="post-link" href="/2020/01/01/redirecting-all-traffic-to-https.html">
+                Redirecting all traffic to https (ssl certificate)
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Dec 31, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/12/31/shop-official-bootstrap-themes.html">
+                Shop Official Bootstrap Themes
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Dec 26, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/12/26/4-simple-exercises-to-strengthen.html">
+                4 simple exercises to strengthen attention and reduce distractibility |
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Dec 25, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/12/25/flutter-for-android-developers-flutter.html">
+                Flutter for Android developers - Flutter
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Dec 25, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/12/25/flutter-beautiful-native-apps-in-record.html">
+                Flutter - Beautiful native apps in record time
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Dec 25, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/12/25/comparing-javascript-with-dart-in-2019.html">
+                Comparing JavaScript with Dart in 2019 - codeburst
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Dec 24, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/12/24/google-pay-wants-to-teach-you-how-to.html">
+                Google Pay wants to teach you how to avoid UPI fraudsters - The Economic Times
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Dec 24, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/12/24/saas-prodct-google.html">
+                Saas prodct - Google
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Dec 22, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/12/22/codeburstio.html">
+                codeburst.io
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Dec 13, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/12/13/12-amazing-pictures-that-show-power-of.html">
+                12 Amazing Pictures That Show The Power Of Mother Nature - N BYTS
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Dec 13, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/12/13/some-kids-thing.html">
+                Some kids thing
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Dec 12, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/12/12/oyo-founder-ritesh-agarwal-my-mom-says.html">
+                OYO founder Ritesh Agarwal: My mom says I won&#39;t find a bride as I don&#39;t have college degree |
+                INTERVIEW - The Financial Express
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Dec 12, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/12/12/flutter-112-announced-with-support-for.html">
+                Flutter 1.12 announced with support for web, MacOS, and more
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Dec 11, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/12/11/stack-overflow-developer-survey-2018.html">
+                Stack Overflow Developer Survey 2018
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Dec 4, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/12/04/bsnl-is-modis-bsnl-mtnl-rescue-strategy.html">
+                BSNL: Is Modi’s BSNL, MTNL rescue strategy real?, Telecom News, ET Telecom
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Dec 4, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/12/04/amazing-login-signup-ui-in-flutter-by.html">
+                Amazing Login &amp; Signup UI in Flutter by render_code | CodeCanyon
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Dec 4, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/12/04/quit-smoking-and-get-six-days-off.html">
+                Quit smoking and get six days off
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Dec 4, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/12/04/no-question-of-calling-godse-patriot.html">
+                No question of calling Godse ”patriot”: Rajnath
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Dec 4, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/12/04/freakout-india-future-of-mobile.html">
+                FreakOut India – The Future of Mobile Advertising
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Dec 3, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/12/03/how-googles-featured-snippets-work.html">
+                How Google’s featured snippets work - Google Search Help
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Nov 29, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/11/29/watch-stylus-tutorials-on-youtube.html">
+                Watch &quot;Stylus Tutorials&quot; on YouTube
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Nov 28, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/11/28/ultimate-onoine-freecodecamporg-mosg.html">
+                Ultimate Onoine - freecodecamp.org - MOSG POPULAR GITHUB
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Nov 28, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/11/28/online-games-on-poki-lets-play.html">
+                Online Games on Poki — Let&#39;s play
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Nov 28, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/11/28/how-to-ace-coding-interview-by-ex.html">
+                How To Ace the Coding Interview, by an Ex-Facebook Interviewer
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Nov 28, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/11/28/5-ways-to-use-javascript-hashmap.html">
+                5 Ways to Use a JavaScript Hashmap | Sunfish Empire LLC
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Nov 25, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/11/25/3-ways-of-biometric-authentication-in.html">
+                3 Ways of Biometric Authentication in Web Application | M2SYS Blog On Biometric Technology
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Nov 22, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/11/22/map-javascript-mdn.html">
+                Map - JavaScript | MDN
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Nov 21, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/11/21/convert-recipe-weights-to-recipe-volumes.html">
+                Convert Recipe Weights to Recipe Volumes
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Nov 21, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/11/21/calculatemecom-comprehensive-conversion.html">
+                CalculateMe.com - Comprehensive Conversion Utility
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Nov 21, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/11/21/weight-of-1-tablespoon-of-honey.html">
+                Weight of 1 Tablespoon of Honey
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Nov 21, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/11/21/pwa-now-available-on-google-play-store_21.html">
+                PWA now available on Google Play Store. Progressive Web App Update 2019
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Nov 19, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/11/19/pwa-now-available-on-google-play-store.html">
+                PWA now available on Google Play Store. Progressive Web App Update 2019
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Nov 18, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/11/18/59-what-are-some-good-video-repair.html">
+                (59) What are some good video repair tools? - Quora
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Nov 16, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/11/16/difference-between-mla-and-mp.html">
+                Difference between MLA and MP - Businessinsider India on Mobile
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Nov 9, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/11/09/push-messages-for-web-applications.html">
+                Push messages for Web Applications
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Nov 9, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/11/09/blog-post.html">
+                Blog Post
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Nov 8, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/11/08/build-progressive-web-app-with-firebase.html">
+                Build a Progressive Web App with Firebase, Polymerfire and Polymer Components
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Nov 7, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/11/07/publish-pwa-progressive-web-app-in.html">
+                Publish a PWA (Progressive Web App) in the Google Play Store
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Nov 7, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/11/07/google-play-store-now-open-for.html">
+                “Google Play Store now open for Progressive Web Apps 😱”
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Nov 7, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/11/07/linebreak-style-rules-eslint-pluggable.html">
+                linebreak-style - Rules - ESLint - Pluggable JavaScript linter
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Nov 7, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/11/07/52-startups-in-india-are-potential.html">
+                52 startups in India are potential unicorns
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Nov 6, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/11/06/font-good.html">
+                Font good
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Nov 5, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/11/05/home-js-foundation.html">
+                Home - JS Foundation
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Nov 5, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/11/05/top-13-indian-web-series-that-you-can.html">
+                Top 13 Indian Web Series that you can Binge Watch for Free on YouTube
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Nov 1, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/11/01/logging-in-nodejs-express-app-with.html">
+                Logging in a Node.js Express app with Morgan and Bunyan
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Oct 31, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/10/31/white-sound-youtube.html">
+                white sound - YouTube
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Oct 31, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/10/31/6-chrome-extensions-to-make-you-more.html">
+                6 Chrome extensions to make you more productive at work
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Oct 29, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/10/29/what-is-difference-between-save-and.html">
+                What is the difference between --save and --save-dev? - Stack Overflow
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Oct 28, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/10/28/export-javascript-mdn.html">
+                export - JavaScript | MDN
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Oct 28, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/10/28/psybient-google-search.html">
+                psybient - Google Search
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Oct 27, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/10/27/home-hello-bar-email-subscripyion.html">
+                Home - Hello Bar - Email Subscripyion Service for website.
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Oct 24, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/10/24/websequencediagrams.html">
+                WebSequenceDiagrams
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Oct 23, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/10/23/webpage-to-pdf-free-online-converter.html">
+                Webpage to PDF - Free Online Converter || Printfriendly Alternate
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Oct 22, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/10/22/tc39proposal-object-rest-spread.html">
+                tc39/proposal-object-rest-spread: Rest/Spread Properties for ECMAScript
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Oct 22, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/10/22/ecmascript-6-compatibility-table.html">
+                ECMAScript 6 compatibility table
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Oct 22, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/10/22/font-love-find-this-text-font.html">
+                Font Love - Find this text font
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Oct 21, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/10/21/nodejs-whats-difference-between.html">
+                node.js - What&#39;s the difference between dependencies, devDependencies and peerDependencies in npm
+                package.json file? - Stack Overflow
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Oct 21, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/10/21/ko-fi-get-support-from-people-who-love.html">
+                Ko-fi | Get support from people who love your work. A free Buy Me a Coffee Button for creators
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Oct 21, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/10/21/how-to-apply-color-in-markdown-stack.html">
+                How to apply color in Markdown? - Stack Overflow
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Oct 21, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/10/21/what-web-can-do-today.html">
+                What Web Can Do Today
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Oct 21, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/10/21/home-bill-gates.html">
+                Home | Bill Gates
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Oct 21, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/10/21/can-romance-improve-your-odds-of.html">
+                Can romance improve your odds of survival? | Bill Gates
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Oct 21, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/10/21/my-wish-list-for-progressive-web-apps.html">
+                My Wish List for Progressive Web Apps in 2019 - Maximiliano Firtman - Medium
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Oct 21, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/10/21/9-amazing-pwa-secrets-creative-bloq.html">
+                9 amazing PWA secrets | Creative Bloq
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Oct 21, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/10/21/npx-npm-about-npx-npmjscom.html">
+                npx - npm | About npx - npmjs.com
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Oct 21, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/10/21/mdnpwa-examples-examples-for.html">
+                mdn/pwa-examples: Examples for progressive web apps.
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Oct 21, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/10/21/progressive-web-apps-mdn.html">
+                Progressive web apps | MDN
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Oct 21, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/10/21/pwa-examples-pwa-examples-mdn.html">
+                PWA Examples | pwa-examples - mdn Progressive web App
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Oct 21, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/10/21/js13kgames-html5-and-javascript-game.html">
+                js13kGames - HTML5 and JavaScript Game Development Competition in just 13 kilobytes
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Oct 21, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/10/21/create-13-kb-javascript-game-in-30-days.html">
+                Create a 13 kB JavaScript game in 30 days with js13kGames - The GitHub Blog
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Oct 17, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/10/17/whats-difference-between-chromium-and.html">
+                What’s the Difference Between Chromium and Chrome?
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Oct 16, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/10/16/top-tools-to-boost-mobile-app.html">
+                Top tools to boost mobile app development with React Native | DA-14
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Oct 16, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/10/16/draftbitavatar-generator-persona-avatar.html">
+                draftbit/avatar-generator: Persona Avatar Generator by Draftbit
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Oct 16, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/10/16/storybook-ui-component-explorer-for.html">
+                Storybook: UI component explorer for frontend developers
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Oct 16, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/10/16/jest-delightful-javascript-testing.html">
+                Jest · 🃏 Delightful JavaScript Testing
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Oct 16, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/10/16/what-are-advantages-of-minified.html">
+                What are the advantages of minified javascript code? - Stack Overflow
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Oct 16, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/10/16/sizes-of-js-frameworks-just-minified.html">
+                Sizes of JS frameworks, just minified minified and gzipped, (React, Angular 2, Vue, Ember), Bundle Size
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Oct 15, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/10/15/a-guide-to-nodejs-e-commerce-w-koajs.html">
+                A Guide to Node.js E-Commerce (w/ Koa.js Tutorial) - Snipcart
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Oct 15, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/10/15/foodsharing-save-with.html">
+                foodsharing | Save with!
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Oct 15, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/10/15/expo-react-native-something-boo.html">
+                Expo - React Native Something Boo
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Oct 15, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/10/15/nativebase-essential-cross-platform-ui.html">
+                NativeBase | Essential cross-platform UI components for React Native - React Native Something Boo.
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Oct 15, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/10/15/arxivorg-e-print-archive.html">
+                arXiv.org e-Print archive
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Oct 15, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/10/15/kylie-jenner-has-officially-become.html">
+                Kylie Jenner has officially become the youngest self-made billionaire ever | Business Insider India
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Oct 14, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/10/14/facebook-ads-vs-google-adwords-which.html">
+                Facebook Ads vs. Google AdWords: Which Should You Be Using? | WordStream
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Oct 14, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/10/14/slack-subscriptions-and-features-slack.html">
+                Slack subscriptions and features | Slack
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Oct 13, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/10/13/triyit-product-discovery-club.html">
+                Triyit | Product Discovery Club
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Oct 13, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/10/13/how-to-become-data-scientist-in-2019.html">
+                How to Become a Data Scientist in 2019: A Complete Guide - GeeksforGeeks
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Oct 10, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/10/10/getting-started-on-heroku-with-nodejs.html">
+                Getting Started on Heroku with Node.js | Heroku Dev Center
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Oct 10, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/10/10/outstanding-responsive-moodle-themes.html">
+                Outstanding Responsive Moodle Themes
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Oct 10, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/10/10/3rd-wave-media.html">
+                3rd Wave Media
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Oct 10, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/10/10/ux-centred-bootstrap-templates-themes.html">
+                UX Centred Bootstrap Templates &amp; Themes For Developers | UX &amp; Bootstrap
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Oct 9, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/10/09/i-want-to-recommend-this-product-on.html">
+                I want to recommend this product on Amazon
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Oct 9, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/10/09/coriolis-force-wikipedia.html">
+                Coriolis force - Wikipedia
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Oct 9, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/10/09/21-behaviors-that-will-make-you.html">
+                “21 Behaviors That Will Make You Brilliant at Creativity &amp; Relationships”
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Oct 8, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/10/08/rightmessage-ask-right-questions-pitch.html">
+                RightMessage | Ask the right questions, pitch the perfect offer
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Oct 7, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/10/07/unique-selling-proposition-wikipedia.html">
+                Unique selling proposition - Wikipedia
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Oct 5, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/10/05/i-dont-like-coding-what-should-i-do-to.html">
+                I don&#39;t like Coding. What should I do to Get a Job in IT? - GeeksforGeeks
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Oct 5, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/10/05/wwwtamilrockermoviescom.html">
+                www.tamilrockermovies.com
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Oct 5, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/10/05/war-movie-review-by-rajeev-masand.html">
+                War Movie Review By Rajeev Masand (हिंदी) | Hrithik Roshan | Tiger Shrof...
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Oct 5, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/10/05/how-to-memorize-entire-deck-of-cards.html">
+                How to Memorize an Entire Deck of Cards, Guaranteed (and Supercharge Your Memory) | Inc.com
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Oct 3, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/10/03/arkose-labs-authentication-master.html">
+                Arkose Labs - Authentication Master
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Oct 3, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/10/03/no-undef-rules-eslint-pluggable.html">
+                no-undef - Rules - ESLint - Pluggable JavaScript linter
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Oct 2, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/10/02/we-make-packaging-disappear-notpla.html">
+                We make packaging disappear - Notpla
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Oct 2, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/10/02/interpersonal-dynamics-stanford.html">
+                Interpersonal Dynamics | Stanford Graduate School of Business
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Oct 2, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/10/02/documentaries-movies-online-cornel1801.html">
+                Documentaries movies online | cornel1801
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Oct 2, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/10/02/lets-encrypt-free-ssltls-certificates.html">
+                Let&#39;s Encrypt - Free SSL/TLS Certificates
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Oct 2, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/10/02/mahatma-gandhi-wikipedia.html">
+                Mahatma Gandhi - Wikipedia
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Sep 30, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/09/30/20-expert-tactics-for-dealing-with.html">
+                20 Expert Tactics for Dealing with Difficult People | Psychology Today
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Sep 28, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/09/28/react-native-examples.html">
+                React Native examples
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Sep 27, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/09/27/mental-floss.html">
+                Mental Floss
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Sep 27, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/09/27/using-apache-http-server-on-microsoft.html">
+                Using Apache HTTP Server on Microsoft Windows - Apache HTTP Server Version 2.4
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Sep 26, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/09/26/how-to-get-php-script-to-run-in-browser.html">
+                How to get PHP script to run in browser? - Stack Overflow
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Sep 26, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/09/26/sockets-can-two-applications-listen-to.html">
+                sockets - Can two applications listen to the same port? - Stack Overflow
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Sep 26, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/09/26/is-it-possible-to-interact-with-mysql.html">
+                Is it possible to interact with a MySQL database without PHP - Stack Overflow
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Sep 26, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/09/26/cmd-php-is-not-recognized-as-internal.html">
+                cmd - PHP is not recognized as an internal or external command in command prompt - Stack Overflow
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Sep 26, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/09/26/mysql-download-mysql-installer.html">
+                MySQL :: Download MySQL Installer
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Sep 26, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/09/26/how-to-install-mysql-database-server-on.html">
+                How to Install the MySQL Database Server on Your Windows PC
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Sep 26, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/09/26/news18-wrap-pm-modi-gets-global.html">
+                News18 Wrap: PM Modi Gets &#39;Global Goalkeeper&#39; Award, Delhi Court Dismisses Shivakumar&#39;s Bail
+                Plea &amp; Other Stories You Missed
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Sep 25, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/09/25/an-intro-to-git-and-github-for.html">
+                An Intro to Git and GitHub for Beginners (Tutorial)
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Sep 25, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/09/25/apache-subversion.html">
+                Apache Subversion
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Sep 25, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/09/25/javascript-is-using-var-to-declare.html">
+                javascript - Is using &#39;var&#39; to declare variables optional? - Stack Overflow
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Sep 25, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/09/25/html-programming-with-visual-studio-code.html">
+                HTML Programming with Visual Studio Code
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Sep 25, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/09/25/typographic-design-patterns-and-best.html">
+                Typographic Design Patterns And Best Practices — Smashing Magazine
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Sep 24, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/09/24/list-of-programming-languages-wikipedia.html">
+                List of programming languages - Wikipedia
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Sep 24, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/09/24/list-of-programming-languages-by-type.html">
+                List of programming languages by type - Wikipedia
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Sep 24, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/09/24/selenium-software-wikipedia.html">
+                Selenium (software) - Wikipedia
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Sep 24, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/09/24/guide-to-web-browser-automation.html">
+                Guide to Web Browser Automation
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Sep 24, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/09/24/stack-overflow-blog-destination-for-all.html">
+                Stack Overflow Blog - A destination for all things related to development at Stack Overflow
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Sep 23, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/09/23/configureit-reviews-overview-pricing.html">
+                Configure.IT Reviews: Overview, Pricing and Features
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Sep 23, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/09/23/9-most-popular-and-useful-apis-for.html">
+                9 Most popular and useful APIs for Mobile Application Development - Configure.IT Blog
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Sep 23, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/09/23/which-is-better-web-development-or-app.html">
+                Which is better, web development or app development? What are the best websites to learn web or app
+                development, and which one should I start on, iOS or Android? - Quora
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Sep 23, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/09/23/dreamweaver-vs-wordpress-how-to-build.html">
+                Dreamweaver vs WordPress? – How to Build Websites
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Sep 23, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/09/23/pandoc-need-to-convert-files-one-markup.html">
+                Pandoc - Need to convert files, One markup format to Another
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Sep 23, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/09/23/guide-what-how-when-web-development-or.html">
+                Guide - What / How / When? Web development or android development? - General - The freeCodeCamp Forum
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Aug 21, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/08/21/windows-character-in-end-of-alphabetic.html">
+                Windows - Character in end of Alphabetic List - Stack Overflow
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Jul 24, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/07/24/flowers.html">
+                Flowers - Copy/Paste Graphic - MailBird
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Jul 24, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/07/24/the-big-bang-theory.html">
+                The Big Bang Theory - Source: indexof.ir
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Jul 14, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/07/14/sucrose-vs-glucose-vs-fructose-whats.html">
+                Sucrose vs Glucose vs Fructose: What&#39;s the Difference?
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Jul 14, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/07/14/amazon-sells-19000-do-it-yourself-tiny.html">
+                Amazon sells a $19,000 do-it-yourself tiny-home kit that only takes 2 days to build - here&#39;s what it
+                looks like inside | Business Insider India
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Jul 14, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/07/14/training-overview-majento-courses-and.html">
+                Training Overview - Majento Courses and Trainings
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Jul 14, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/07/14/spirituality-in-workplace-pros-and-cons.html">
+                Spirituality in the Workplace Pros and Cons - WiseStep
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Jul 14, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/07/14/ecommerce-resources-magento.html">
+                eCommerce Resources | Magento
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Jul 14, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/07/14/avatar-tv-series-on-nickeledeon.html">
+                Avatar TV Series on Nickeledeon
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Jul 14, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/07/14/11-health-benefits-of-onion-and-banana.html">
+                11 Health Benefits of Onion and Banana Juice (#1 Energy Source) - Dr Heben
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Jul 14, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/07/14/cds-exam-i-2019-eligibility-exam.html">
+                CDS Exam (I) 2019 Eligibility, Exam Pattern and Detailed Syllabus
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Jul 13, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/07/13/download-all-ved-and-puran-pdf-hindi.html">
+                Download All Ved and Puran PDF Hindi Free | Ved Puran
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Jul 11, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/07/11/educational-and-fun-learning-activity.html">
+                Educational and Fun Learning Activity Toys - Magic Crate
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Jul 11, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/07/11/steve-jobs-designed-first-macintosh.html">
+                Steve Jobs Designed The First Macintosh Calculator - Business Insider
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Jul 11, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/07/11/inccom-small-business-ideas-and.html">
+                inc.com -Small Business Ideas and Resources for Entrepreneurs
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Jul 11, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/07/11/reverse-dictionary.html">
+                Reverse Dictionary
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Jul 11, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/07/11/watch-mantras-for-deep-inner-peace-8.html">
+                Watch &quot;Mantras for Deep Inner Peace | 8 Powerful Mantras&quot; on YouTube
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Jul 10, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/07/10/is-marijuana-addictive-elemental.html">
+                Is Marijuana Addictive? – Elemental
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Jul 4, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/07/04/web-developer-how-to-edit-any-web-page.html">
+                Web Developer : How to Edit Any Web Page in your Browser
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Jul 4, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/07/04/google-web-designer-home.html">
+                Google Web Designer - Home
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Jul 4, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/07/04/difference-between-scripting-and.html">
+                Difference between Scripting and Programming Languages? - GeeksforGeeks
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Jul 4, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/07/04/angellist-where-world-meets-startups.html">
+                AngelList - Where the world meets startups
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Jul 4, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/07/04/work-computer-neck-exercises-stretches.html">
+                Work, Computer: Neck Exercises &amp; Stretches
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Jul 4, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/07/04/past-failure-is-no-excuse-for-present.html">
+                Past Failure Is No Excuse for Present Inaction | The Art of Manliness
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Jul 4, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/07/04/youtube-premium-youtube.html">
+                YouTube Premium - YouTube
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Jul 4, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/07/04/grow-with-google-youtube.html">
+                Grow with Google - YouTube
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Jul 4, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/07/04/how-to-clean-your-gmail-auto-complete.html">
+                How to Clean Your Gmail Auto Complete List • Productivity Portfolio
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Jul 3, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/07/03/mit-license-wikipedia.html">
+                MIT License - Wikipedia
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Jul 3, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/07/03/license-compatibility-wikipedia_3.html">
+                License compatibility - Wikipedia
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Jun 29, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/06/29/grains-whole-grain-multi-grain-oats-and.html">
+                Grains, Whole Grain, Multi-grain, Oats and Measurements(spoons)
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Jun 27, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/06/27/watch-78-benefits-of-walking-by-puneet.html">
+                Watch &quot;78 benefits of walking by puneet biseria || SWAMI VIVEKANANDA&quot; on YouTube
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Jun 27, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/06/27/fwd-big-bang-theory-season1-8-all.html">
+                Big Bang Theory - Season1-8 - All Episodes
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Jun 24, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/06/24/focus-on-yourself-sadguru-video-to-come.html">
+                Focus on Yourself - Youtube - Sadguru
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Jun 22, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/06/22/10-startups-that-are-going-to-create.html">
+                10 Startups that are going to create history in Chandigarh - YourStory.com
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Jun 22, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/06/22/what-is-lpa-in-salary-terms-quora.html">
+                What is LPA in salary terms? - Quora
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Jun 22, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/06/22/14-css-button-click-effects_22.html">
+                14 CSS Button Click Effects
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Jun 22, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/06/22/alt-codes.html">
+                Alt Codes
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Jun 22, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/06/22/cryptii-v2.html">
+                CRYPTII v2
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Jun 22, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/06/22/html-entity-encoderdecoder.html">
+                HTML entity encoder/decoder
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Jun 21, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/06/21/books-collection-sahil-rajput.html">
+                Books Collection ~ Sahil Rajput
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Jun 20, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/06/20/bloggers-interest.html">
+                Bloggers Interest - The Art of Manliness
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Jun 19, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/06/19/which-dictionary-is-better-oxford-or.html">
+                Which Dictionary is better? Oxford or Cambridge? Why? - Quora.com
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Jun 17, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/06/17/how-to-use-github-for-hosting-files.html">
+                How to Use Github for Hosting Files - Labnol.org
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">May 7, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/05/07/karma-yog-jnana-yog-bhakti-yog-dhyana.html">
+                Karma Yog, Jnana Yog, Bhakti Yog, Dhyana Yog, Ashtanga Yog, Raj Yog, Patanjali Yog.
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">May 6, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/05/06/wtf-fun-facts.html">
+                WTF - Fun Facts
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">May 6, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/05/06/httpswww.html">
+                JotForm - Easiest Form Builder
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">May 5, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/05/05/know-about-cryptocurrency.html">
+                Know about CryptoCurrency
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Apr 30, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/04/30/mongodb-resource-tutorialspoint.html">
+                Full Stack
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Apr 23, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/04/23/backup-of-blogger-blogs-and-theme-blog.html">
+                Backup of Blogger Blogs and Theme (Blog Data and Template Code respectively).
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Apr 23, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/04/23/find-me-on-githubcom.html">
+                Find me on GitHub.com
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Apr 23, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/04/23/window_22.html">
+                Fibre Optics
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Apr 23, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/04/23/learn-notepad.html">
+                Learn Notepad++
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Apr 20, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/04/20/quora-some-great-websites-using-only.html">
+                Quora - Some great websites (using only HTML and CSS)
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Apr 20, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/04/20/html-color-codes.html">
+                HTML Color Codes
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Apr 20, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/04/20/add-clock-widget-to-blog.html">
+                Add clock widget to Blog
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Apr 20, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/04/20/73-best-free-fonts-for-designers.html">
+                73 best free fonts for designers
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Apr 20, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/04/20/34-web-design-tools.html">
+                34 Web Design Tools
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Apr 20, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/04/20/website-blogging-designs.html">
+                Website / Blogging Designs
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Apr 20, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/04/20/sample-images-videos.html">
+                Sample Images / Videos / Audio / Text / Files
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Apr 20, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/04/20/blockchain-what-is-it.html">
+                Blockchain? What is it?
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Apr 18, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/04/18/window_84.html">
+                Disqus: Engage with audience.
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Apr 18, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/04/18/how-to-vote-india.html">
+                How to vote #India
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Apr 18, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/04/18/window_18.html">
+                Learn Wordpress @ Youtube
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Apr 18, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/04/18/scripts.html">
+                Blogger Help Codes
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Apr 18, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/04/18/learn-google-drive.html">
+                Google Drive Hot-Keys
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Apr 18, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/04/18/direct-link-google-drive.html">
+                Direct Link Google Drive
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Apr 12, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/04/12/001-acmarketnet.html">
+                Android Premium
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Apr 7, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/04/07/windows-themes-applies-to-78110.html">
+                Windows Themes [Applies to: 7,8.1,10]
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Apr 7, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/04/07/adobe-photoshop-shortcuts.html">
+                Learn Adobe Photoshop
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Apr 7, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/04/07/free-stock-images.html">
+                Free Stock Images
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Apr 7, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/04/07/chrome-keyboard-shortcuts.html">
+                Chrome keyboard shortcuts
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Apr 7, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/04/07/keyboard-shortcuts-for-gmail.html">
+                Keyboard shortcuts for Gmail
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Apr 7, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/04/07/5-behaviors-that-reveal-someone-is.html">
+                5 Behaviors That Reveal Someone Is Mentally Strong
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Apr 7, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/04/07/window.html">
+                6 Simple Rituals of Extremely Successful People
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Apr 6, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/04/06/40-gmail-hacks-and-tricks-every.html">
+                40 Gmail Hacks And Tricks Every Marketer Needs To Know
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Mar 31, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/03/31/video-playerteamplace.html">
+                Video Player(team@Place)
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Mar 24, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/03/24/infinite-drive-online-uploadfiles.html">
+                Infinte Online Storage
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Mar 22, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/03/22/book-library.html">
+                Book Library
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Mar 20, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/03/20/mehak.html">
+                mehak
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Mar 18, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/03/18/9-killer-blogspot-seo-tips-for-bloggers.html">
+                9 Killer Blogspot SEO Tips For bloggers
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Mar 18, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/03/18/the-ultimate-guide-to-boost-wordpress.html">
+                The Ultimate Guide to Boost WordPress Speed &amp; Performance
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Mar 18, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/03/18/how-netflix-works-hugely-simplified.html">
+                How Netflix works: the (hugely simplified) complex stuff that happens every time you hit Play
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Mar 18, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/03/18/20-ecommerce-advantages-and.html">
+                20 Ecommerce Advantages and Disadvantages You Need to Know
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Mar 17, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/03/17/viivekanada-ideology.html">
+                VIivekanada Ideology
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Mar 17, 2019</span>
+            <h3>
+              <a class="post-link" href="/2019/03/17/blog-post.html">
+                Designing Reads (Medium.com)
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Dec 30, 2018</span>
+            <h3>
+              <a class="post-link" href="/2018/12/30/mirzapur-season.html">
+                Mirzapur Season
+              </a>
+            </h3>
+          </li>
+          <li><span class="post-meta">Dec 30, 2018</span>
+            <h3>
+              <a class="post-link" href="/2018/12/30/sacred-games.html">
+                Sacred Games Season
+              </a>
+            </h3>
+          </li>
+        </ul>
 
-/* Put code here */
+        <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+      </div>
 
+    </div>
+  </main>
+  <footer class="site-footer h-card">
+    <data class="u-url" href="/"></data>
 
-// BOOBOOM TAMTAM
-window.addEventListener('beforeinstallprompt', (event) => {
-  console.log('👍', 'beforeinstallprompt', event);
-  // Stash the event so it can be triggered later.
-  window.deferredPrompt = event;
-  // BOOM => FOR INSTANTLY ASKING FOR ADDING THE ADD TO MOBILE/DESKTOP
-  window.deferredPrompt.prompt()
-  // BOOM ^^ FOR INSTANTLY ASKING FOR ADDING THE ADD TO MOBILE/DESKTOP
+    <div class="wrapper">
 
-  // Remove the 'hidden' class from the install button container
-  divInstall.classList.toggle('hidden', false);
-});
+      <h2 class="footer-heading">Your awesome title</h2>
 
-butInstall.addEventListener('click', () => {
-  console.log('👍', 'butInstall-clicked');
-  const promptEvent = window.deferredPrompt
-  if (!promptEvent) {
-    // The deferred prompt isn't available.
-    return;
-  }
-  // Show the install prompt.
-  promptEvent.prompt();
-  // Log the result
-  promptEvent.userChoice.then((result) => {
-    console.log('👍', 'userChoice', result);
-    // Reset the deferred prompt variable, since
-    // prompt() can only be called once.
-    window.deferredPrompt = null;
-    // Hide the install button.
-    divInstall.classList.toggle('hidden', true);
-  });
-});
-// BOOBOOM TAMTAM
+      <div class="footer-col-wrapper">
+        <div class="footer-col footer-col-1">
+          <ul class="contact-list">
+            <li class="p-name">Your awesome title</li>
+            <li><a class="u-email" href="mailto:your-email@example.com">your-email@example.com</a></li>
+          </ul>
+        </div>
 
+        <div class="footer-col footer-col-2">
+          <ul class="social-media-list">
+            <li><a href="https://github.com/jekyll"><svg class="svg-icon">
+                  <use xlink:href="/assets/minima-social-icons.svg#github"></use>
+                </svg> <span class="username">jekyll</span></a></li>
+            <li><a href="https://www.twitter.com/jekyllrb"><svg class="svg-icon">
+                  <use xlink:href="/assets/minima-social-icons.svg#twitter"></use>
+                </svg> <span class="username">jekyllrb</span></a></li>
+          </ul>
+        </div>
 
-/* Only register a service worker if it's supported */
-if ('serviceWorker' in navigator) {
-  // SERVICE WORKER FROM SOME OTHER DOMAIN WILL STILL BE A PROBLEM. WEBAPK: NO, WEBAPP SHORTCUT: YES
-  // navigator.serviceWorker.register('https://chetanmishra8660.github.io/service-worker.js');
-  // service worker should be in the root location only of the same domain(not from domain other than this)
-  navigator.serviceWorker.register('/service-worker.js');
-}
+        <div class="footer-col footer-col-3">
+          <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear
+            in your document head meta (for Google search results) and in your feed.xml site description.</p>
+        </div>
+      </div>
 
-/**
- * Warn the page must be served over HTTPS
- * The `beforeinstallprompt` event won't fire if the page is served over HTTP.
- * Installability requires a service worker with a fetch event handler, and
- * if the page isn't served over HTTPS, the service worker won't load.
- */
-if (window.location.protocol === 'http:') {
-  const requireHTTPS = document.getElementById('requireHTTPS');
-  const link = requireHTTPS.querySelector('a');
-  link.href = window.location.href.replace('http://', 'https://');
-  requireHTTPS.classList.remove('hidden');
-}
-     </script>
-  </body>
+    </div>
+
+  </footer>
+</body>
+
 </html>
