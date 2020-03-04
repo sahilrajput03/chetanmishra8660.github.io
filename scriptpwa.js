@@ -3,9 +3,6 @@ const butInstall = document.getElementById('butInstall');
 
 /* Put code here */
 // KHATARNAAK AREA STARTS HERE.
-
-
-
 // BOOBOOM TAMTAM
 window.addEventListener('beforeinstallprompt', (event) => {
   console.log('👍', 'beforeinstallprompt', event);
@@ -39,10 +36,6 @@ butInstall.addEventListener('click', () => {
   });
 });
 // BOOBOOM TAMTAM
-
-
-
-
 // KHATARNAAK AREA ENDS HERE.
 
 /* Only register a service worker if it's supported */
