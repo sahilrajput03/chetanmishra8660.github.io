@@ -17,3 +17,11 @@ COMMAND USED TO CREATE JEKYLL-BLOG:-
 jekyll new jekyll-jinn
 cd jekyll-jinn
 bundle exec jekyll serve
+
+Setting up jekyll favicon
+https://medium.com/@xiang_zhou/how-to-add-a-favicon-to-your-jekyll-site-2ac2179cc2ed
+
+Setting up header (which gets to body section) executing jekyll:
+Copy the header.html file present in theme folder i.e., minima.(just as we copied the head.html and pasted it local _includes of our jekyll folder).
+
+Also cared about the .hidden class in the same head.html file in the local _assets folder of our jekyll blog project.

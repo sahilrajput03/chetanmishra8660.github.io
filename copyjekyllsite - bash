@@ -1,0 +1,1 @@
+cd jekyll-jinn/_site/ && cp -r . ../../
