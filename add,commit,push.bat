@@ -1,1 +1,2 @@
 git add . && git commit -m "commit-via-script" && git push && echo ....... && echo.Pushed to repo: chetanmishra8660.github.io && @pause
+if errorlevel 1 echo ....... && echo.FAILEDD: Commit and push to repo: chetanmishra8660.github.io echo.POSSIBLY DUE TO INVALID CREDENTIALS(login)/OTHER USER CREDENTIAL.
