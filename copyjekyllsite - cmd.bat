@@ -1,0 +1,1 @@
+cd jekyll-jinn/_site/ && xcopy . "../.." /e /i
