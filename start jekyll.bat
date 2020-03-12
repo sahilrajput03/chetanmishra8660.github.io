@@ -1,0 +1,1 @@
+cd jekyll-jinn && bundle exec jekyll serve
