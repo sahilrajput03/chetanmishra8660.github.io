@@ -24,7 +24,11 @@ window.addEventListener("beforeinstallprompt", (event) => {
 });
 
 setTimeout(() => {
-  if (!window.matchMedia("(display-mode: standalone)").matches && !flag) {
+  if (
+    !window.matchMedia("(display-mode: standalone)").matches &&
+    !flag &&
+    navigator.userAgent.toLowerCase().indexOf("android") > -1
+  ) {
     divInstall22.classList.toggle("hidden", false);
     console.log(flag);
   }
