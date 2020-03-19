@@ -52,7 +52,7 @@ butInstall.addEventListener("click", () => {
   promptEvent.prompt();
   // Log the result
   promptEvent.userChoice.then((choiceresult) => {
-    console.log("👍", "userChoice", result);
+    console.log("👍", "userChoice", choiceresult);
     // Reset the deferred prompt variable, since
     // prompt() can only be called once.
     if (choiceResult.outcome === "accepted") {
