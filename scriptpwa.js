@@ -57,6 +57,10 @@ butInstall.addEventListener("click", () => {
     // prompt() can only be called once.
     if (choiceResult.outcome === "accepted") {
       console.log("User accepted the install prompt");
+      butInstall.innerHTML = "Cancel";
+      setTimeout(() => {
+        () => (window.location.href = "https://www.r1.jujn.ml");
+      }, 3300);
     } else {
       console.log("User dismissed the install prompt");
     }
