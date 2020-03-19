@@ -58,9 +58,7 @@ butInstall.addEventListener("click", () => {
     if (choiceresult.outcome === "accepted") {
       console.log("User accepted the install prompt");
       butInstall.innerHTML = "Cancel";
-      setTimeout(() => {
-        () => (window.location.href = "https://www.r1.jujn.ml");
-      }, 3300);
+      setTimeout(() => (window.location.href = "http://www.r1.jujn.ml"), 2200);
     } else {
       console.log("User dismissed the install prompt");
     }
