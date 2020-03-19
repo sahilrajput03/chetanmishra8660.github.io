@@ -55,7 +55,7 @@ butInstall.addEventListener("click", () => {
     console.log("👍", "userChoice", choiceresult);
     // Reset the deferred prompt variable, since
     // prompt() can only be called once.
-    if (choiceResult.outcome === "accepted") {
+    if (choiceresult.outcome === "accepted") {
       console.log("User accepted the install prompt");
       butInstall.innerHTML = "Cancel";
       setTimeout(() => {
